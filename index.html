@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Passeio do Cavelo</title>
+	<link rel="stylesheet" type="text/css" href="passeio.css">
+	<script type="text/javascript" src="passeio.js"></script>
+	<script src="https://kit.fontawesome.com/092d3f6b65.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="inserir();">
+	<div id="tabuleiro">
+		<img id='cavalo' class="big" src='imgs/cavalo.png' alt='peça cavalo do xadrez'>
+		<p id="titulo">O Passeio do Cavalo</p>
+	</div>
+	<div id="side">
+		<div id="configs">
+			<label>
+				Colunas:<br>
+				<input id="colunas" class="mini" type="number" placeholder="8..." min="1" max="26">
+			</label>
+			<label>
+				Linhas:<br>
+				<input id="linhas" class="mini" type="number" placeholder="8..." min="1" max="26">
+			</label>
+			<br>
+			<label>
+				Posição inicial:<br>
+				<input id="inicial" class="normal" type="text" placeholder="a1...">
+			</label>
+			<br>
+			<button id="build" onclick="build();">Criar</button>
+		</div>
+		<div id="controles">
+			<label>Movimentos:</label>
+			<div id="historico"></div>
+			<button id="primeira" onclick="primeira();"><i class="fas fa-angle-double-left"></i></button>
+			<button id="voltar" onclick="voltar();"><i class="fas fa-angle-left"></i></button>
+			<button id="avancar" onclick="avancar();"><i class="fas fa-angle-right"></i></button>
+			<button id="ultima" onclick="ultima();"><i class="fas fa-angle-double-right"></i></button>
+		</div>
+	</div>
+</body>
+</html>
